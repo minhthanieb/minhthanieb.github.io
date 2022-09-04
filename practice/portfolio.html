@@ -1,11 +1,20 @@
 <html>
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Pattaya' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-    <script src="https://kit.fontawesome.com/8298f109c6.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pattaya"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8298f109c6.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
-        font-family: 'Poppins';
+        font-family: "Poppins";
       }
       .header {
         position: relative;
@@ -15,7 +24,7 @@
         grid-template-columns: auto auto;
       }
       .header .name {
-        font-family: 'Pattaya';
+        font-family: "Pattaya";
         font-size: 48px;
         line-height: 216px;
         text-align: center;
@@ -26,9 +35,10 @@
         font-weight: bold;
         font-size: 24px;
         color: white;
-        justify-items: flex-end;        
+        justify-items: flex-end;
       }
-      .top-menu li, .top-menu i{
+      .top-menu li,
+      .top-menu i {
         display: inline-block;
         padding-left: 97px;
         line-height: 216px;
@@ -47,7 +57,7 @@
         height: 878px;
       }
       .about-me .container .image {
-        background-image: url('aboutme.jpg');
+        background-image: url("aboutme.jpg");
         background-position: center;
         background-size: 680px;
         width: 672px;
@@ -73,7 +83,7 @@
         line-height: 36px;
       }
       .about-me .button {
-        box-sizing: border-box;        
+        box-sizing: border-box;
         border: 1px solid;
         padding: 29px 73px 21px 77px;
         font-weight: 400;
@@ -84,7 +94,7 @@
         width: 464px;
         height: 86px;
         margin: auto;
-        color: rgba(0,0,0,0.57);
+        color: rgba(0, 0, 0, 0.57);
       }
       .about-me .links {
         margin-top: 34px;
@@ -99,6 +109,51 @@
       .footer {
         height: 174px;
       }
+      .service-package-1 {
+        margin-top: 89px;
+        margin-left: 100px;
+        height: 609px;
+        display: flex;
+        min-width: 1520px;
+      }
+      .service-package-1 .background {
+        padding: 52px 56px 52px 57px;
+        width: 551px;
+        height: 505px;
+        background-color: rgba(183, 76, 76, 0.35);
+      }
+      .service-package-1 .image {
+        width: 551px;
+        height: 505px;
+        background-image: url('image1.jpg');
+        background-position: center;
+      }
+      .service-package-1 .text {
+        padding-top: 165px;
+        padding-left: 83px;
+
+      }
+      .service-package-1 .text .description {
+        margin-top: 46px;
+      }
+      .service-package-1 .text .title {
+        font-weight: 700;
+        font-size: 36px;
+      }
+      .service-package-1 .text .title .heading {
+        line-height: 74px;
+        letter-spacing: 10px;
+      }
+      .service-package-1 .text .button {
+        float: right;
+        background-color: rgba(192, 105, 77, 0.47);
+        color: white;
+        padding: 10px 43px;
+      }
+      .service-package-1 .text .description {
+        font-weight: 400;
+        font-size: 18px;
+      }
     </style>
   </head>
   <body>
@@ -111,8 +166,6 @@
         <li>Contact</li>
         <i class="fa-solid fa-magnifying-glass"></i>
       </ul>
-      
-      
     </div>
     <div class="about-me">
       <div>
@@ -122,7 +175,12 @@
       </div>
       <div>
         <div class="title">ABOUT ME</div>
-        <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac egestas facilisi arcu vivamus. Sit magna at id ipsum sit id viverra felis et. Pellentesque amet tristique rhoncu, donec a euismod velit. Hendrerit molestie fermentum odi euismod.</div>
+        <div class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac egestas
+          facilisi arcu vivamus. Sit magna at id ipsum sit id viverra felis et.
+          Pellentesque amet tristique rhoncu, donec a euismod velit. Hendrerit
+          molestie fermentum odi euismod.
+        </div>
         <div class="button">Let’s Chat</div>
         <div class="links">
           <i class="fa fa-google"></i>
@@ -132,11 +190,21 @@
         </div>
       </div>
     </div>
-    <div class="service-packages">
-      <div class="service-package-left">Service package</div> 
-      <div class="service-package-right">Service package</div> 
-      <div class="service-package-left">Service package</div> 
-      <div class="service-package-middle">Service package</div> 
+      <div class="service-package-1">
+        <div class="background">
+          <div class="image"></div>
+        </div>
+        <div class="text">
+          <div class="title">
+            <span class="heading">service package</span>
+            <span class="button">View</span>
+          </div>
+          <div class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac egestas facilisi arcu vivamus. Sit magna at id ipsum sit id viverra felis et. Pellentesque amet tristique rhoncu, donec a euismod velit. Hendrerit molestie fermentum odi euismod.</div>
+        </div>
+      </div>
+      <div class="service-package-2">Service package</div>
+      <div class="service-package-3">Service package</div>
+      <div class="service-package-4">Service package</div>
     </div>
     <div class="testimonials"></div>
     <div class="follow-me"></div>
