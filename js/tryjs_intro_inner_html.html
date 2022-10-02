@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      function onClick() {
+        document.getElementById("demo").innerHTML = "Hello Javascript!";
+      }
+
+      function onLoad() {
+        myButton = document.getElementById("myButton")
+        myButton.onclick = onClick;
+      }
+
+      window.addEventListener("load",onLoad);
+    </script>
+  </head>
+  <body>
+    <h2>What Can Javascript Do?</h2>
+    <p id="demo">
+      Javascript can change HTML content.
+    </p>
+    <button id="myButton" type="button">
+      Click Me!
+    </button>
+    
+  </body>
+</html>
