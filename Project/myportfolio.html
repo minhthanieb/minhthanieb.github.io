@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Verdana"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Monaco"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8298f109c6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: "Monaco";
+        background-color: #b3aeae;
+      }
+
+      .header {
+        position: relative;
+        height: 216px;
+        background-color: rgb(180, 180, 180);
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+
+      .header .greeting {
+        font-family: "Verdana";
+        font-size: 48px;
+        line-height: 216px;
+        text-align: left;
+        left: 50px;
+        letter-spacing: 0.2cm;
+        position: relative;
+      }
+
+      .about-me {
+        height: 378px;
+        display: flex;
+      }
+      .avatar {
+        width: 325px;
+        height: 292px;
+        background-image: url("aboutmeprofile.png");
+        background-position: center;
+      }
+      .circle {
+        margin: 48px 43px 25px 34px;
+        background-color: rgb(217, 217,217);
+        border-radius: 200px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <span class="greeting">Welcome!</span>
+    </div>
+    <div class="about-me">
+      <div class="circle">
+        <div class="avatar"></div>
+      </div>
+
+      <div class="introduction"></div>
+    </div>
+  </body>
+</html>
