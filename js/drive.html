@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <script>
+      async function loadFiles() {
+        let token = document.getElementById('token').value;
+        console.log(token);
+        let response = await fetch(
+          'https://www.googleapis.com/drive/v3/files', 
+          { 
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          }
+        );
+
+        if (response.ok) { // if HTTP-status is 200-299
+          // get the response body (the method explained below)
+          let responseBody = await response.json();
+          const div = document.getElementById('fileList');
+          for (let i=0;i<responseBody.files.length;i++) {
+            const para = document.createElement("p");
+            para.innerText = responseBody.files[i].name;
+            div.appendChild(para);
+          }
+          
+        } else {
+          alert("HTTP-Error: " + response.status);
+        }
+      };
+    </script>
+  </head>
+  <body>
+    Token: <input type='text' id='token' />
+    <button onclick="loadFiles()">Load files</button>
+    <div id="fileList">
+
+    </div>
+    
+  </body>
+</html>
