@@ -1,6 +1,24 @@
 <html>
   <head>
     <script>
+      async function deleteFile(eventArg) {
+        console.log(eventArg.target.id);
+        let token = document.getElementById('token').value;
+        let response = await fetch(
+          'https://www.googleapis.com/drive/v3/files/' + eventArg.target.id, 
+          { 
+            method: 'DELETE',
+            headers: {
+              'Authorization': 'Bearer ' + token
+            }
+          }
+        );
+
+        if (response.ok) {
+          console.log('deleted');
+        }
+      }
+
       async function loadFiles() {
         let token = document.getElementById('token').value;
         console.log(token);
@@ -17,10 +35,16 @@
           // get the response body (the method explained below)
           let responseBody = await response.json();
           const div = document.getElementById('fileList');
+          div.innerHTML = '';
           for (let i=0;i<responseBody.files.length;i++) {
             const para = document.createElement("p");
             para.innerText = responseBody.files[i].name;
             div.appendChild(para);
+            const butt = document.createElement('button');
+            butt.id = responseBody.files[i].id;
+            butt.innerText = "Delete " + responseBody.files[i].name;
+            div.appendChild(butt);
+            butt.addEventListener("click", deleteFile)
           }
           
         } else {
